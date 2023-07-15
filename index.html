@@ -12,7 +12,7 @@
     async function example(){
      let response = await fetch(`https://newsapi.org/v2/Top-headlines?country=in&category=entertainment&pageSize=15&page=1&apiKey=9ce181ae0b5a4d4bbb260a3be64661c5`);
       let data = await response.json();
-      document.getElementsByClassName('test')[0].innerHTML = data.articles[0].title;
+      console.log( data.articles[0].title +"adfasdfadf");
     }
     example();
           </script>
