@@ -9,10 +9,11 @@
     <div class="test"></div>
 </body>
 <script>
-    async function example(){
-     let response = await fetch(`https://newsapi.org/v2/Top-headlines?country=in&category=entertainment&pageSize=15&page=1&apiKey=9ce181ae0b5a4d4bbb260a3be64661c5`);
+   async function example(){
+     let response = await fetch(`https://newsdata.io/api/1/news?apikey=pub_262435ed1c5919ace62f1fc0ec68f7a152292&country=in&language=en&category=business `);
       let data = await response.json();
-      console.log( data.articles[0].title +"adfasdfadf");
+      document.getElementsByClassName('test')[0].innerHTML = data.results[0].title;
+    //   console.log( data.results[0].title);
     }
     example();
           </script>
